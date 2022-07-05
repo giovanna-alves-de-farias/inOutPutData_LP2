@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.File;
 import java.util.NoSuchElementException;
-import java.io.FileNotFoundException;
+//import java.io.FileNotFoundException;
 
 public class creditlnquiry {
 
@@ -17,20 +17,20 @@ public class creditlnquiry {
 
         try {
 
-            input = new Scanner(new File("..\\cliente.txt"));
+            //input = new Scanner(new File("..\\cliente.txt"));
 
             while (input.hasNext()) {
 
                 record.setAccount(input.nextInt());
-                record.setfirstName(input.next());
-                record.setlastName(input.next());
-                record.setbalance(input.nextDouble());
+                record.setFirstName(input.next());
+                record.setLastName(input.next());
+                record.setBalance(input.nextDouble());
 
-                if(shouldDisplay(record.getbalance())) {
+                if(shouldDisplay(record.getBalance())) {
 
                     System.out.printf(" %-10d%-125%-12s%10.2f\n", 
-                    record.getAccount(), record.getfirstName(), 
-                    record.getlastName(), record.getbalance());
+                    record.getAccount(), record.getFirstName(), 
+                    record.getLastName(), record.getBalance());
 
                 }
 
@@ -85,7 +85,7 @@ public class creditlnquiry {
 
             do {
 
-                System.out.print("\n?");
+                System.out.print("\n ");
                 request = textIn.nextInt();
 
             }
